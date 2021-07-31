@@ -16,10 +16,3 @@ class LinemsgApplication
 fun main(args: Array<String>) {
 	runApplication<LinemsgApplication>(*args)
 }
-
-@EventMapping
-fun handleTextMessage(e: MessageEvent<TextMessageContent?>): Message? {
-	println("event: $e")
-	val message: TextMessageContent? = e.message
-	return TextMessage(message?.text)
-}
