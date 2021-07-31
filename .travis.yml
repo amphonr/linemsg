@@ -1,3 +1,6 @@
+git:
+  quiet: true
 language: java
-sudo: false
-script: mvn clean verify
+script:
+  - jdk_switcher use openjdk8
+  - # do stuff with open Java 8
